@@ -1,0 +1,80 @@
+@import '../../themes/themes.scss';
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    width:400px;
+    height:500px;
+    max-width: 100%;
+    max-height: 100%;
+    background-color: $primary;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: auto;
+    padding: 10px;
+    &::before {
+        content: "";
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        z-index: -1;
+      }
+      @media (max-width: 390px) {
+        width:300px;
+      }
+  }
+
+  .modalContent {
+    background-color: $background;
+    padding: 20px;
+    border-radius: 15px;
+    height:fit-content;
+    overflow: auto;
+
+    .descriptionContainer {
+      background-color: $background;
+      overflow: auto;
+    }
+}
+
+.image {
+    width: 170px;
+    height: 240px;
+}
+
+.title {
+  color: $primary;
+  margin-block-start: 0.25em;
+  margin-block-end: 0.5em;
+}
+
+.moreInfo {
+  margin-block-end: 0.5em;
+}
+
+.button {
+  margin-top: 10px;
+  border-radius: 5px;
+  border: 2px solid $primary;
+  padding: 3px;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(43, 43, 43, 0.614); 
+    z-index: 0;
+  }
