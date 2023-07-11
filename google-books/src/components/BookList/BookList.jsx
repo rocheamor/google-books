@@ -11,7 +11,7 @@ const BookList = ({ books }) => {
       setSelectedBook(book);
       setIsModalOpen(true);
     };
-  
+
     const closeModal = () => {
       setIsModalOpen(false);
     };
@@ -24,9 +24,7 @@ const BookList = ({ books }) => {
         ))}
       </ul>
       
-      {isModalOpen && (
-        <BookModal book={selectedBook} onClose={closeModal} />
-      )}
+      {isModalOpen && <BookModal book={selectedBook} onClose={closeModal} />}
     </div>
   );
 };
