@@ -1,0 +1,30 @@
+.main {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  gap: 1em;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.background-image {
+    position: relative;
+  }
+  
+  .main::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('../../assets/bookshelf.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 0.3;
+    z-index: -1; 
+  }
