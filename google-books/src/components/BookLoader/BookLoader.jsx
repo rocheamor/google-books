@@ -31,7 +31,7 @@ const BookLoader = () => {
       <div className={styles.wrapper}>
         <div>
           <Header />
-          <Description/>
+          {/* <Description/> */}
         </div>
         <div>
           <SearchBar/>
